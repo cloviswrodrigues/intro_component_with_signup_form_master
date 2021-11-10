@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #ff7a7a url(/frontend/assets/bg-intro-mobile.png) no-repeat left top;
+}
+
+.wrapper {
+  max-width: 350px;
+  margin: 2rem auto;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
