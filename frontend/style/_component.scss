@@ -1,0 +1,28 @@
+.content__offer {
+    padding: 1rem;
+    background-color: $color-blue;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+
+.content__form {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: 1rem;
+    border-radius: 5px;
+
+    input {
+        border: 1px solid $color-grayish-blue;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        background-color: $color-green;
+        padding: 1rem;        
+        border-radius: 5px;
+    }
+}

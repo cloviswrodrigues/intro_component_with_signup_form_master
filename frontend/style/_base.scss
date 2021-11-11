@@ -13,7 +13,7 @@ $color-white: white;
     box-sizing: border-box;
 }
 
-html {
+html, input, button {
     font-family: 'Poppins', sans-serif;
     color: $color-white;
 }
@@ -24,8 +24,12 @@ body {
     background: $color-red url(/frontend/assets/bg-intro-mobile.png) no-repeat left top;
 }
 
+input, button {
+    border: 0;
+}
+
 .wrapper {
-    max-width: 350px;
+    width: 90%;
     margin: 2rem auto;
     text-align: center;
 }
