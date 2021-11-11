@@ -13,7 +13,8 @@ html, input, button {
 body {
   width: 100vw;
   height: 100vh;
-  background: #ff7a7a url(/frontend/assets/bg-intro-mobile.png) no-repeat left top;
+  background: #ff7a7a url(/frontend/assets/bg-intro-mobile.png) no-repeat center top;
+  font-size: 16px;
 }
 
 input, button {
@@ -22,15 +23,43 @@ input, button {
 
 .wrapper {
   width: 90%;
+  max-width: 350px;
   margin: 2rem auto;
   text-align: center;
+  padding-bottom: 4rem;
+}
+
+header {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+header .header__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+header .header__text {
+  font-size: 1rem;
+  color: #e7e6f0;
+  padding: 1rem;
 }
 
 .content__offer {
-  padding: 1rem;
+  padding: 1rem 6em;
   background-color: #6055a5;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-size: .8rem;
+  font-weight: 400;
+  -webkit-box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.content__offer span {
+  font-weight: 700;
 }
 
 .content__form {
@@ -43,10 +72,14 @@ input, button {
           flex-direction: column;
   background-color: white;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.2);
 }
 
 .content__form input {
+  color: #3e3c49;
+  font-weight: 600;
   border: 1px solid #b9b6d3;
   border-radius: 5px;
   padding: 1rem;
@@ -54,8 +87,26 @@ input, button {
 }
 
 .content__form button {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .125rem;
   background-color: #38cc8c;
   padding: 1rem;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 1px #2ba671;
+          box-shadow: 0px 5px 1px #2ba671;
+}
+
+.content__form .content__form-terms {
+  margin-top: .7rem;
+  font-size: .6rem;
+  color: #b9b6d3;
+  padding: 0 3rem;
+  line-height: 1.2rem;
+}
+
+.content__form .content__form-terms span {
+  color: #ff7a7a;
+  font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */
