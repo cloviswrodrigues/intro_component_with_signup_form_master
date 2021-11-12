@@ -6,6 +6,7 @@ $color-dark-blue: hsl(249, 10%, 26%);
 $color-grayish-blue: hsl(246, 25%, 77%);
 $color-white: white;
 
+$break-desktop: 1000px;
 
 * {
     margin: 0;
@@ -23,6 +24,10 @@ body {
     height: 100vh;
     background: $color-red url(/frontend/assets/bg-intro-mobile.png) no-repeat center top;
     font-size: 16px;
+
+    @media screen and (min-width: $break-desktop) {
+        background: $color-red url(/frontend/assets/bg-intro-desktop.png) no-repeat center top;
+    }
 }
 
 input, button {
@@ -30,9 +35,22 @@ input, button {
 }
 
 .wrapper {
-    width: 90%;
+    width: 90%;    
     max-width: 350px;
+    height: 100%;
     margin: 2rem auto;
     text-align: center;
     padding-bottom: 4rem;
+
+    @media screen and (min-width: $break-desktop) {
+        width: 80%;
+        max-width: 1150px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10rem;
+        justify-content: center;
+        align-content: center;
+        margin: 0 auto;
+        padding: 0;
+    }
 }

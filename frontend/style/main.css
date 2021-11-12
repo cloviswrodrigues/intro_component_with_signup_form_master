@@ -17,6 +17,12 @@ body {
   font-size: 16px;
 }
 
+@media screen and (min-width: 1000px) {
+  body {
+    background: #ff7a7a url(/frontend/assets/bg-intro-desktop.png) no-repeat center top;
+  }
+}
+
 input, button {
   border: 0;
 }
@@ -24,9 +30,29 @@ input, button {
 .wrapper {
   width: 90%;
   max-width: 350px;
+  height: 100%;
   margin: 2rem auto;
   text-align: center;
   padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .wrapper {
+    width: 80%;
+    max-width: 1150px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
 header {
@@ -41,10 +67,30 @@ header .header__title {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 1000px) {
+  header .header__title {
+    font-size: 3rem;
+    padding-right: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
 header .header__text {
   font-size: 1rem;
   color: #e7e6f0;
   padding: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  header .header__text {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    text-align: left;
+  }
 }
 
 .content__offer {
@@ -95,6 +141,11 @@ header .header__text {
   border-radius: 5px;
   -webkit-box-shadow: 0px 5px 1px #2ba671;
           box-shadow: 0px 5px 1px #2ba671;
+  cursor: pointer;
+}
+
+.content__form button:hover {
+  opacity: .6;
 }
 
 .content__form .content__form-terms {
