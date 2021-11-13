@@ -21,11 +21,11 @@ html, input, button {
 
 body {
     width: 100vw;
-    height: 100vh;
     background: $color-red url(/frontend/assets/bg-intro-mobile.png) no-repeat center top;
     font-size: 16px;
 
-    @media screen and (min-width: $break-desktop) {
+    @media screen and (min-width: $break-desktop) {        
+        height: 100vh;
         background: $color-red url(/frontend/assets/bg-intro-desktop.png) no-repeat center top;
     }
 }
