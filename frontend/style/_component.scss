@@ -34,7 +34,20 @@
         }
 
         span {
-            display: inline-block;
+            display: none;
+        }
+
+        .input-error {
+            border: 2px solid $color-red;
+            color: $color-red;
+
+            &:focus {     
+                outline: none;
+            }
+        }
+
+        .form__span-error {
+            display: inline-block !important;
             width: 100%;
             font-size: .6rem;
             font-weight: 600;
@@ -51,15 +64,6 @@
                 width: 1.5rem;
                 height: 1.5rem;
                 background-image: url(/frontend/assets/icon-error.svg);
-            }
-        }
-
-        .input-error {
-            border: 2px solid $color-red;
-            color: $color-red;
-
-            &:focus {     
-                outline: none;
             }
         }
     }

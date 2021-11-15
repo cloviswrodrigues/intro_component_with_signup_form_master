@@ -138,24 +138,7 @@ header .header__text {
 }
 
 .content__form .content__form-group span {
-  display: inline-block;
-  width: 100%;
-  font-size: .6rem;
-  font-weight: 600;
-  font-style: italic;
-  color: #ff7a7a;
-  text-align: right;
-}
-
-.content__form .content__form-group span::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(/frontend/assets/icon-error.svg);
+  display: none;
 }
 
 .content__form .content__form-group .input-error {
@@ -165,6 +148,27 @@ header .header__text {
 
 .content__form .content__form-group .input-error:focus {
   outline: none;
+}
+
+.content__form .content__form-group .form__span-error {
+  display: inline-block !important;
+  width: 100%;
+  font-size: .6rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #ff7a7a;
+  text-align: right;
+}
+
+.content__form .content__form-group .form__span-error::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(/frontend/assets/icon-error.svg);
 }
 
 .content__form button {
