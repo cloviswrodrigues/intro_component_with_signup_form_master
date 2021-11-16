@@ -1,22 +1,33 @@
 const form = document.getElementById('form');
-const divFormGroup = document.getElementsByClassName('content__form-group');
+const divFormGroup = document.querySelectorAll('.content__form-group');
 
 form.addEventListener('submit', (e) => {             
     e.preventDefault();   
+    disableAllErrorInput()
     let validate = validateInputs();
     if (!validate) {
         document.location.reload();
     }
 })
 
-form.addEventListener('focusin', (e) => {
-    activeErrorInputEmail(false);
-});
-
 function validateInputs() {
-    divFormGroup.forEach(element => {
-        console.log('e: ' +element);
+    let error = false;
+    divFormGroup.forEach(function(e){
+        if (e.children[0].value == ''){
+            console.log('esta vazio')
+            activeErrorInput(true,e)
+            error = true;
+        }
+
+        if (e.children[0].name == 'email'){
+            if (!isValidEmail(e.children[0].value)) {
+                activeErrorInput(true,e)
+                error = true;
+            }
+        }
     });
+
+    return error;
 }
 
 function isValidEmail(email){
@@ -24,12 +35,18 @@ function isValidEmail(email){
     return regex.exec(email) == null ? false : true;
 }
 
-function activeErrorInputEmail(active, element) {
+function disableAllErrorInput(){
+    divFormGroup.forEach(function(e){        
+        activeErrorInput(false,e)
+    });
+}
+
+function activeErrorInput(active, element) {
     if (active){
-        // elementclassList.add('error-active');
-        // spanEmail.classList.add('error');
+        element.children[0].classList.add('input-error');
+        element.children[1].classList.add('form__span-error');
     }else {
-        // inputEmail.classList.remove('error-active');
-        // spanEmail.classList.remove('error');
+        element.children[0].classList.remove('input-error');
+        element.children[1].classList.remove('form__span-error');
     }
 }
